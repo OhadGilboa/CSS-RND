@@ -7,5 +7,6 @@ class Renderer {
   renderProducts(data) {
     const html = this.template({ data })
     $('#container').empty().append(html)
+    console.log(data)
   }
 }

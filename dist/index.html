@@ -6,17 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <div id="menu-wrapper">
-      <p class="nav-item">Logo Placeholder</p>
+      <p class="logo">Floop</p>
       <p class="nav-item">Feed</p>
       <p class="nav-item">Hot Deals</p>
       <p class="nav-item">Add</p>
-      <button>SIGN UP</button>
-      <button>LOG IN</button>
+      <div></div>
+      <div class="button menu">SIGN UP</div>
+      <div class="button menu">LOG IN</div>
+      
   </div>
 
   <div id=container></div>
@@ -25,15 +29,16 @@
   <script id="products-template" type="text/x-handlebars-template">
     {{#each data}}
     <div class="product">
-      <p>{{title}}</p>
-      <div><img src="{{image}}" /></div>
+      <div class="image"><img src="{{image}}" /></div>
+      <p class="title">{{title}}</p>
       <div class="info-container">
+        <p></p>
         <p>{{comments}} comments</p>
         <p>{{likes}} likes</p>
       </div>
       <div class="buy-container">
         <p>{{price}}{{currency}}</p>
-        <button>Buy Now</button>
+        <div class="button">Buy Now</div>
       </div>
     </div>
     {{/each}}
